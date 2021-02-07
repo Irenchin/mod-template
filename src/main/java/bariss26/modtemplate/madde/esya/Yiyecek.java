@@ -3,11 +3,12 @@ package bariss26.modtemplate.madde.esya;
 import bariss26.modtemplate.Ana;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemFood;
 
-public class Esya extends Item{
+public class Yiyecek extends ItemFood{
 
-	public Esya(String isim) {
+	public Yiyecek(String isim, int p_i45339_1_, float p_i45339_2_, boolean p_i45339_3_) {
+		super(p_i45339_1_, p_i45339_2_, true);
 		this.setUnlocalizedName(isim);
 		this.setCreativeTab(Ana.sekme);
 		GameRegistry.registerItem(this, isim);
