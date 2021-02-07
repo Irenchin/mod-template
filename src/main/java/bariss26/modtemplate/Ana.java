@@ -41,6 +41,6 @@ public class Ana {
 		
 	}
 	
-	public static CreativeTabs sekme = new Sekme(CreativeTabs.getNextID(), "Sekme");
+	public static CreativeTabs sekme = new Sekme(CreativeTabs.getNextID(), "sekme");
 	
 }
