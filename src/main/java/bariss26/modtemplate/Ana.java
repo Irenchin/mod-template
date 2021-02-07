@@ -1,7 +1,11 @@
 package bariss26.modtemplate;
 
+import org.apache.logging.log4j.Logger;
+
+import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -11,7 +15,13 @@ public class Ana {
 
 	public static final String modKimlik = "modtemplate";
 	public static final String modSurum = "1.0.0";
-	public static final String modIsim = "Mod-Template";	
+	public static final String modIsim = "Mod Template";	
+
+	public static Logger oduncu = FMLLog.getLogger();
+	
+	@SidedProxy(clientSide="bariss26.modtemplate.Musteri", serverSide="bariss26.modtemplate.Sunucu")
+	public static Sunucu sunucu;
+	public static Musteri musteri;
 	
 	@EventHandler
 	public static void giris(FMLPreInitializationEvent event) {
@@ -20,7 +30,7 @@ public class Ana {
 	
 	@EventHandler
 	public static void gelisme(FMLInitializationEvent event) {
-		
+		sunucu.rendele();
 	}
 	
 	@EventHandler
