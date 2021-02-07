@@ -2,6 +2,7 @@ package bariss26.modtemplate;
 
 import org.apache.logging.log4j.Logger;
 
+import bariss26.modtemplate.madde.EsyalarBloklar;
 import bariss26.modtemplate.sanal.Sekme;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
@@ -27,7 +28,7 @@ public class Ana {
 	
 	@EventHandler
 	public static void giris(FMLPreInitializationEvent event) {
-		
+		EsyalarBloklar.firla();
 	}
 	
 	@EventHandler
